@@ -1,0 +1,119 @@
+/* app css stylesheet */
+.md-subheader-inner {
+    padding: 0px;
+}
+
+#sidenav_left {
+    color: #909265;
+}
+
+#sidenav_left_logo {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.txt_cl1 {
+    color: #6d6e4c;
+}
+
+.bg_cl1 {
+    background-color: #2E441C;
+    color: whitesmoke;
+}
+
+table {
+    padding: 0.1em;
+
+}
+
+td.padding1 {
+    padding: 1em;
+    border-bottom: solid #d4cfd7 1px;
+}
+td.padding05 {
+    padding: 0.5em;
+    border-bottom: solid #d4cfd7 1px;
+}
+
+thead > tr {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 1.1em;
+}
+
+tbody > tr {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+tbody > tr:hover {
+    background-color: #eeeeee;
+}
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon{
+    color: #6d6e4c;
+}
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar{
+    color: #2E441C;
+    background: #2E441C;
+}
+md-radio-button:not([disabled]).md-primary.md-checked .md-off{
+    border-color: #6d6e4c;
+}
+md-radio-button:not([disabled]).md-primary .md-on {
+    background-color: #6d6e4c;
+}
+.rotate180Icon {
+    transform: rotate(0deg);
+}
+
+.rotate180Icon.ng-hide-add{
+    transition-delay: 0s;
+    transition-duration: 0.0s;
+    transition-property: all;
+}
+.rotate180Icon.ng-hide-remove{
+    transition-delay: 0.0s;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+
+.rotate180Icon.ng-hide {
+    transform: rotate(180deg);
+}
+
+.rotate360Icon {
+    transform: rotate(0deg);
+}
+
+.rotate360Icon.ng-hide-add{
+    transition-delay: 0s;
+    transition-duration: 0.0s;
+    transition-property: all;
+}
+.rotate360Icon.ng-hide-remove{
+    transition-delay: 0.0s;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+
+.rotate360Icon.ng-hide {
+    transform: rotate(180deg);
+}
+
+
+.view-animate {
+
+}
+
+.view-animate.ng-leave{
+
+}
+
+.view-animate.ng-enter {
+
+}
+.view-animate.ng-enter.ng-enter-active {
+
+}
+.view-animate.ng-leave.ng-leave-active {
+
+}

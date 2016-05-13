@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" ng-controller="AppCtrl" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" ng-controller="AppCtrl" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" ng-controller="AppCtrl" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" ng-controller="AppCtrl" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{appName}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css"
+          href="bower_components/angular-material-data-table/dist/md-data-table.min.css"/>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<section layout="row" flex style="height: 100%">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <div ng-controller="LeftNavCtrl">
+            <md-toolbar class="md-tall">
+                <md-content id="sidenav_left_logo" layout="row" layout-align="center center">
+                    <img src="resource/img/LOGO280x65.jpg">
+                </md-content>
+            </md-toolbar>
+            <md-divider></md-divider>
+            <md-content layout-padding>
+                <md-list>
+                    <md-list-item ng-click="navigateTo(item.path)" ng-repeat="item in items" class="txt_cl1">
+                        <md-icon class="txt_cl1">{{item.icon}}</md-icon>
+                        <p> {{item.label}} </p>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+    </md-sidenav>
+    <div layout="column" flex="100" ng-cloak>
+        <md-toolbar md-scroll-shrink ng-if="true" >
+            <div class="md-toolbar-tools bg_cl1">
+                <div layout="row" layout-align="start start">
+                    <md-button class="md-icon-button rotate360Icon" aria-label="Back" ng-click="back()" ng-show="enableBack">
+                        <md-icon class="bg_cl1">arrow_back</md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button rotate360Icon" aria-label="Settings" ng-click="toggleLeft()" ng-hide="enableBack"
+                               hide-gt-md>
+                        <md-icon class="bg_cl1">menu</md-icon>
+                    </md-button>
+                </div>
+                <h2>
+                    <span>{{titulo|uppercase}}</span>
+                </h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <md-content ng-view class="view-animate" flex>
+
+        </md-content>
+    </div>
+</section>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-material-data-table/dist/md-data-table.min.js" type="text/javascript"></script>
+<script src="app.js"></script>
+<script src="home/home.js"></script>
+<script src="cursos/cursos.js"></script>
+<script src="notificaciones/notificaciones.js"></script>
+<script src="curso/curso.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
